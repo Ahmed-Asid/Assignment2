@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Inter;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link, a:visited {
+    color: white;
+}
+
+ul {
+    list-style: none;
+}
+
+/* shared */
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.column {
+    flex-direction: column;
+}
+.h1 {
+    font-size: 3.75rem;
+    font-weight: 800;
+}
+
+.h2 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.normal-text {
+    color: rgb(202, 199, 199);
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+/* navbar */
+
+#navbar {
+    justify-content: space-around;
+    background-color: rgb(30, 5, 66);
+    border-bottom: 1px solid rgba(65, 37, 103, 1);
+    padding: 16px 0;
+}
+
+#navbar>nav>ul {
+    gap: 32px;
+}
+
+.btn {
+    font-weight: 600;
+    padding: 12px 16px;
+    gap: 6px;
+    border-radius: 1000px;
+    background-image: linear-gradient(47.64deg, rgba(247, 233, 63, 1),rgba(251, 9, 180, 1),rgba(145, 0, 248, 1));
+}
+
+/* banner */
+
+#banner {
+    flex-direction: column;
+    background-image: url(./assets/hero-bg.png);
+    padding: 101px 0;
+    background-position: center;
+    background-size: cover;
+    gap: 40px;
+}
+
+.bn-img {
+    background-image: url(./assets/hero-circle.png);
+    background-position: center;
+    background-size: cover;
+    padding: 79px 75px 81px 75px;
+    width: 350px;
+    height: 350px;
+}
+
+.bn-img>p {
+    color: black;
+    border-radius: 1000px;
+    box-shadow: 0px 3px 27px 0px rgba(0, 255, 136, 0.5);
+    background-color:  rgba(0, 255, 136, 1);
+    padding: 8px 16px;
+    font-size: 1.125rem;
+    font-weight: 600;
+    /* !!have to position  */
+}
+
+.btn2 {
+    font-weight: 600;
+    padding: 12px 16px;
+    gap: 6px;
+    border: 1px solid rgba(0, 255, 136, 1);
+    border-radius: 1000px;
+    color: rgba(0, 255, 136, 1);
+}
+
+.bn-btn {
+    gap: 8px;
+}
+
+.bn-text-btn {
+    gap: 24px;
+    flex-direction: column;
+}
+
+/* About */
+
+#about {
+    background-color: rgb(18, 2, 44);
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 0 120px 0;
+}
+
+#about>hr {
+    margin: 80px 0;
+    width: 80%;
+    opacity: 0.1;
+}
+
+.about-2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 80px;
+    
+}
+
+.h-b {
+    font-size: 3rem;
+    font-weight: 900;
+    color: rgba(0, 255, 136, 1);
+}
+
+/* Features */
+
+#feature {
+    background-color: rgb(25, 5, 53);
+    gap: 40px;
+    padding: 120px 200px;
+}
+
+#cards {
+    display: grid;
+    grid-template-areas: 
+     "c1 c2 c2"
+     "c1 c3 c3"
+     "c4 c4 c5";
+    gap: 30px;
+    
+}
+
+#cards>.c1 {
+    grid-area: c1;
+}
+#cards>.c2 {
+    grid-area: c2;
+}
+#cards>.c3 {
+    grid-area: c3;
+}
+#cards>.c4 {
+    grid-area: c4;
+}
+#cards>.c5 {
+    grid-area: c5;
+}
+
+.card {
+    background-color: rgb(31, 6, 66);
+    border-radius: 40px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 16px;
+}
