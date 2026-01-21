@@ -53,17 +53,22 @@ ul {
     font-weight: 400;
 }
 
+.text-center {
+    text-align: center;
+}
+
 /* navbar */
 
 #navbar {
     justify-content: space-around;
     background-color: rgb(30, 5, 66);
     border-bottom: 1px solid rgba(65, 37, 103, 1);
-    padding: 16px 0;
+    padding: 16px 0px;
+    
 }
 
 #navbar>nav>ul {
-    gap: 32px;
+    gap: 2rem;
 }
 
 .btn {
@@ -72,6 +77,10 @@ ul {
     gap: 6px;
     border-radius: 1000px;
     background-image: linear-gradient(47.64deg, rgba(247, 233, 63, 1),rgba(251, 9, 180, 1),rgba(145, 0, 248, 1));
+}
+
+.ham {
+    display: none;
 }
 
 /* banner */
@@ -92,6 +101,7 @@ ul {
     padding: 79px 75px 81px 75px;
     width: 350px;
     height: 350px;
+    position: relative;
 }
 
 .bn-img>p {
@@ -102,7 +112,9 @@ ul {
     padding: 8px 16px;
     font-size: 1.125rem;
     font-weight: 600;
-    /* !!have to position  */
+    position: absolute;
+    top: 20px;
+    right: 15px;
 }
 
 .btn2 {
@@ -141,7 +153,7 @@ ul {
 .about-2 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 80px;
+    gap: 5rem;
     
 }
 
@@ -165,7 +177,7 @@ ul {
      "c1 c2 c2"
      "c1 c3 c3"
      "c4 c4 c5";
-    gap: 30px;
+    gap: 2rem;
     
 }
 
@@ -194,4 +206,196 @@ ul {
     justify-content: center;
     align-items: flex-start;
     gap: 16px;
+}
+
+/* Episodes and Host */
+
+#ep-host {
+    background: rgba(26, 11, 46, 1);
+    gap: 40px;
+    padding: 120px 200px;
+}
+
+#ep {
+    gap: 2rem;
+    margin-bottom: 80px;
+}
+
+.episode {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-radius: 24px;
+    background: rgba(37, 13, 68, 1);
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 24px;
+}
+
+.dur {
+    display: flex;
+    gap: 6px;
+}
+
+.host {
+    background: rgb(38, 19, 64);
+    padding: 40px;
+    border-radius: 40px;
+    gap: 24px;
+}
+
+.host-name {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.host-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.host-social {
+    display: flex;
+    gap: 8px;
+}
+
+.sc-logo {
+    border: 1px solid rgba(83, 60, 114, 1);
+    border-radius: 1000px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* footer */
+
+footer {
+    gap: 32px;
+    padding: 120px;
+    background-image: url(./assets/footer-bg.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.tw-social {
+    gap: 40px;
+}
+
+.social {
+    display: flex;
+    gap: 8px;
+}
+
+/* for mobile device */
+
+@media screen and (max-width:576px) {
+    /* shared */
+    .h1 {
+        font-size: 2.5rem;
+    }
+    .h2 {
+        font-size: 2rem;
+    }
+    .h3 {
+        font-size: 1.5rem;
+    }
+
+    /* navbar */
+    #navbar nav,.btn1 {
+        display: none;
+    }
+    .ham {
+        display: block;
+    }
+    #navbar {
+        justify-content: space-between;
+        padding: 16px 20px;
+    }
+
+    /* banner */
+    #banner {
+        padding: 40px 20px;
+        gap: 20px;
+    }
+    .bn-img {
+        width: 200px;
+        height: 200px;
+    }
+    .bn-img>img {
+        padding: 3px 16px 6px 16px;
+        width: 80px;
+        height: 80px;
+    }
+    .bn-img>p {
+        font-size: 1rem;
+        top: 10px;
+        right: 5px;
+    }
+
+    /* about */
+    #about {
+        padding: 40px 20px;
+    }
+    #about>hr {
+    margin: 40px 0;
+    }
+    .about-1 {
+        gap: 16px;
+    }
+    .about-2 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+
+    /* feature */
+    #feature {
+        padding: 40px 20px;
+        gap: 16px;
+    }
+    #cards {
+        gap: 16px;
+        grid-template-areas: 
+        "c1"
+        "c2"
+        "c3"
+        "c4"
+        "c5";
+    }
+
+    /* episodes and host */
+    #ep-host {
+        padding: 40px 20px;
+        gap: 24px;
+    }
+    #ep {
+        flex-direction: column;
+        gap: 16px;
+        margin-bottom: 40px;
+    }
+    .host {
+        flex-direction: column;
+    }
+
+    /* footer */
+    footer {
+        padding: 40px 20px;
+        gap: 24px;
+    }
+    .tw-logo>img {
+        width: 220px;
+    }
+    .tw-social {
+        display: grid;
+        
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
 }
